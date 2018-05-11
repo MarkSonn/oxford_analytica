@@ -13,6 +13,10 @@ import { AuthGuard } from './auth/auth.guard';
 import { AuthInterceptor } from './auth/auth.interceptors';
 import { appRoutes } from './app.routes';
 import { AppComponent } from './app.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
+import { MatExpansionModule } from '@angular/material/expansion';
+
 
 
 @NgModule({
@@ -28,7 +32,10 @@ import { AppComponent } from './app.component';
     LayoutModule,
     OverlayModule,
     AlertsModule.forRoot(),
-    SidenavModule
+    SidenavModule,
+    MatCardModule,
+    MatListModule,
+    MatExpansionModule
   ],
   providers: [AuthGuard, {
     provide: HTTP_INTERCEPTORS,
